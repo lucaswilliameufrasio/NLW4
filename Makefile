@@ -39,3 +39,15 @@ dev-ecto:
 	export DB_PASS=$$dbPass; \
 	mix ecto.setup
 .PHONY: dev-ecto
+
+up-sudo:
+	sudo docker-compose up -d
+.PHONY: up-sudo
+
+down-sudo:
+	sudo docker-compose down
+.PHONY: down-sudo
+
+attach-sudo:
+	sudo docker exec -it rocketpay_api bash
+.PHONY: attach-sudo

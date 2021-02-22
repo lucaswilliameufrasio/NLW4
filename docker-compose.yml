@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  phoenix:
+    build: .
+    container_name: rocketpay_api
+    command: sh -c 'mix ecto.setup && mix phx.server'
+    restart: always
+    volumes:
+      - .:/usr/app/rocketpay-api
+    environment:
+      - DB_USER=postgres
+      - DB_PASS=postgres
+      - DB_HOST=db
+      - DB_NAME=rocketpay
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: rocketpay
+      PGDATA: /var/lib/postgresql/data/pgdata
+    restart: always
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
