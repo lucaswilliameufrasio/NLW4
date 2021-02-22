@@ -40,6 +40,10 @@ dev-ecto:
 	mix ecto.setup
 .PHONY: dev-ecto
 
+test:
+	mix test
+.PHONY: test
+
 up-sudo:
 	sudo docker-compose up -d
 .PHONY: up-sudo
