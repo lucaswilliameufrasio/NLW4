@@ -19,9 +19,9 @@ dev: configure-database
 	mix phx.server
 .PHONY: dev
 
-dev-ecto: configure-database
+setup-ecto: configure-database
 	mix ecto.setup
-.PHONY: dev-ecto
+.PHONY: setup-ecto
 
 test:
 	mix test
