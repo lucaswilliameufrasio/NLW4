@@ -30,3 +30,5 @@ rocketpay-*.tar
 pgdata
 
 .vscode
+
+.env
