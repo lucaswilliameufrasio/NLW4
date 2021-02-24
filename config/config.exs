@@ -19,8 +19,8 @@ config :rocketpay, RocketpayWeb.Endpoint,
   live_view: [signing_salt: "rv8jglAw"]
 
 config :rocketpay, Rocketpay.Repo,
-  migration_primary_key: [type: binary_id],
-  migration_foreign_key: [type: binary_id]
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
 
 # Configures Elixir's Logger
 config :logger, :console,
