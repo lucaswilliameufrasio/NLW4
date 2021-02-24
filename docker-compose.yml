@@ -13,6 +13,7 @@ services:
       - DB_PASS=postgres
       - DB_HOST=db
       - DB_NAME=rocketpay
+      - POOL_SIZE=7
     ports:
       - "4000:4000"
     depends_on:
