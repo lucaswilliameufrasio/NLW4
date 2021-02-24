@@ -28,3 +28,5 @@ rocketpay-*.tar
 /priv/static/
 
 pgdata
+
+.vscode
