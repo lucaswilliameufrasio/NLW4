@@ -12,6 +12,8 @@ defmodule RocketpayWeb.Router do
     get "/:filename", WelcomeController, :load_file_and_sum
 
     post "/users", UsersController, :create
+
+    post "/accounts/:id/deposit", AccountsController, :deposit
   end
 
   # Enables LiveDashboard only for development
